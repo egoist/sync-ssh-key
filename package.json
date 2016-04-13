@@ -18,7 +18,8 @@
     "test": "xo"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "cli.js"
   ],
   "keywords": [
     "ssh"
