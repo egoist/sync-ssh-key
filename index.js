@@ -12,9 +12,9 @@ module.exports = function (url) {
         return reject(error)
       }
       if (stderr) {
-        return reject(new Error(stderr.toString()))
+        return reject(new Error(stderr))
       }
-      reject(stdout.toString())
+      resolve(stdout)
     })
   })
 }
