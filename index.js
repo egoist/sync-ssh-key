@@ -1,11 +1,20 @@
 'use strict'
-const spawn = require('cross-spawn').sync
+const child = require('child_process')
 
 module.exports = function (url) {
   if (typeof url !== 'string') {
-    throw new TypeError('Expected a string')
+    return Promise.reject(new TypeError('Expected a string'))
   }
 
-  const opts = {stdio: 'inherit'}
-  spawn(`cat ~/.ssh/id_rsa.pub | ssh ${url} "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"`, opts)
+  return new Promise((resolve, reject) => {
+    child.exec(`cat ~/.ssh/id_rsa.pub | ssh ${url} "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"`, (error, stdout, stderr) => {
+      if (error) {
+        return reject(error)
+      }
+      if (stderr) {
+        return reject(new Error(stderr.toString()))
+      }
+      reject(stdout.toString())
+    })
+  })
 }

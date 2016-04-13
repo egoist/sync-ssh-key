@@ -27,8 +27,5 @@
   "xo": {
     "semicolon": false,
     "space": 2
-  },
-  "dependencies": {
-    "cross-spawn": "^2.2.2"
   }
 }
