@@ -18,9 +18,19 @@ syncTo('username:password@ip')
   .catch(e => console.log(e.stack))
 ```
 
-## Related
+## CLI
 
-- [sync-ssh-key-cli](https://github.com/egoist/sync-ssh-key-cli) - CLI for this module
+### Install
+
+```bash
+$ npm install -g sync-ssh-key
+```
+
+### Usage
+
+```bash
+$ sync-ssh-key username:password@ip
+```
 
 ## License
 
