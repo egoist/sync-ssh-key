@@ -1,7 +1,7 @@
 {
   "name": "sync-ssh-key",
   "version": "0.3.0",
-  "description": "Sync ssh public key to remote server so that you can login with being prompted for a password.",
+  "description": "Sync ssh public key to remote server so that you can login without being prompted for a password.",
   "license": "MIT",
   "repository": "egoist/sync-ssh-key",
   "author": {

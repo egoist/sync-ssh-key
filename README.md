@@ -1,6 +1,6 @@
 # sync-ssh-key [![NPM version](https://img.shields.io/npm/v/sync-ssh-key.svg)](https://npmjs.com/package/sync-ssh-key) [![NPM downloads](https://img.shields.io/npm/dm/sync-ssh-key.svg)](https://npmjs.com/package/sync-ssh-key)
 
-> Sync ssh public key to remote server so that you can login with being prompted for a password.
+> Sync ssh public key to remote server so that you can login without being prompted for a password.
 
 ## Install
 
