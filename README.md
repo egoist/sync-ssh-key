@@ -14,6 +14,8 @@ $ npm install --save sync-ssh-key
 const syncTo = require('sync-ssh-key')
 
 syncTo('username:password@ip')
+  .then(() => console.log('success'))
+  .catch(e => console.log(e.stack))
 ```
 
 ## Related
